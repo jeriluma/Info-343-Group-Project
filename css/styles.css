@@ -15,10 +15,16 @@ h1 {
 	font-size: 100px;
 	text-align: center;
 	color: #AB526B;
+    vertical-align: inherit;
 }
 
 .header-image {
 	 display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.logo {
+    width: 10%;
+    vertical-align: inherit;
 }
