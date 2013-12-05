@@ -1,1 +1,22 @@
-/* main styles sheet */
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+body {
+        background-repeat: inherit;
+        background-size: 100%;
+        font-family: 'Muli', sans-serif;
+        font-size: 18px;
+        padding: 10px;
+}
+
+h1 {
+	font-family: 'Poiret One', cursive;
+	font-size: 100px;
+	text-align: center;
+}
+
+.header-image {
+	 display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
