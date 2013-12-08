@@ -115,7 +115,7 @@ $(function(){
             name: this.getAttribute('data-name'),
             sizeLetter: this.getAttribute('data-sizeLetter'),
             size: this.getAttribute('data-size'),
-            price: parseInt(this.getAttribute('data-price'))
+            price: parseFloat(this.getAttribute('data-price'))
         };
 
         cartModel.addItem(newCartItem);
