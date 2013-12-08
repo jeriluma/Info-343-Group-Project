@@ -63,7 +63,58 @@
                     <h4 class="price"></h4>
                     <p class="description"></p>
                 </div>
+                <div>
+                    <button type="button" class="btn btn-default add-to-cart" data-size="Small" 'data-sizeLetter'="S">S</button>
+                    <button type="button" class="btn btn-default add-to-cart" data-size="Medium" 'data-sizeLetter'="M">M</button>
+                    <button type="button" class="btn btn-default add-to-cart" data-size="Large" 'data-sizeLetter'="L">L</button>
+                </div>
             </div>
+
+            <!-- Shopping Cart -->
+            <div>
+                <button type="button" class="btn btn-danger empty-cart-btn"><span class="glyphicon glyphicon-remove"></span> Empty Cart</button>
+            </div>
+
+            <!-- Shopping Cart Template -->
+            <div class="cart-item-container">
+                <div class="cart-item-template">
+                    <button type="button" class="btn btn-default btn-xs cart-item-remove-btn"><span class="glyphicon glyphicon-remove remove-item"></span></button>
+                    <span class="size"></span>
+                    <span class="name"></span>
+                    $<span class="price"></span>
+                </div>
+            </div> <!-- Shopping Cart Template -->
+
+            <!-- Shopping Cart Checkout -->
+            <div class="cart-checkout">
+                <div class="row">
+                    <div class="col-xs-10">
+                            Subtotal:
+                        </div>
+                        <div class="col-xs-2">
+                            $<span class="subtotal-price"></span>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-10">
+                            Sales Tax @ 9.5%:
+                        </div>
+                        <div class="col-xs-2">
+                            $<span class="total-price-tax"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-10">
+                            Total:
+                        </div>
+                        <div class="col-xs-2">
+                            $<span class="total-price"></span>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success check-out-btn">Check Out</button>
+            </div> <!-- Shopping Cart Checkout -->
+
         </div> <!-- .container -->
 
         <footer id="footer" class="clearfix"> 
@@ -91,5 +142,6 @@
 	    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="js/populateShop.js"></script>
         <script src="js/built-shop.js"></script>
+        <script src="js/cartSupport.js"></script>
     </body>
 </html>
