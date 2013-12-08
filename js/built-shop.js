@@ -41,6 +41,7 @@ function render(entries) {
             alt: clothingItem.title
         }); 
         clonedTemplate.find('.title').html(clothingItem.title);
+        clonedTemplate.find('.type').html(clothingItem.type);
         clonedTemplate.find('.price').html(clothingItem.price);
         clonedTemplate.find('.description').html(clothingItem.description);
         clonedTemplate.find('.add-to-cart').attr({
@@ -58,7 +59,7 @@ function render(entries) {
 $(function(){
 
     //sort the clothes array by title of item
-    sortObjArray(Clothes.entries, 'title');
+    sortObjArray(Clothes.entries, 'type');
 
     //render the items
     render(Clothes.entries);
@@ -66,7 +67,7 @@ $(function(){
     //register event handlers for sort buttons
     $('.sort-ui .btn').click(function(){
         var $this = $(this);                        //sort bytton being clicked
-        var sortBy = $this.attr('data-sortby');     //sort by title
+        var sortBy = $this.attr('data-sortby');     //sort by type
 
         //resort the entries by the sort property name
         sortObjArray(Clothes.entries, sortBy);
