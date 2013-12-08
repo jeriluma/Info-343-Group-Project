@@ -116,6 +116,20 @@
                 <button type="button" class="btn btn-success check-out-btn">Check Out</button>
             </div> <!-- Shopping Cart Checkout -->
 
+            <!-- Paypal Form -->
+            <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="upload" value="1">
+                <input type="hidden" name="business" value="jerissalumansoc@gmail.com">
+                <span class="paypal-item-container">
+                    <span class="paypal-item-template">
+                        <input type="hidden" id="item-name" name="item_name_" value="">
+                        <input type="hidden" id="amount" name="amount_" value="">
+                    </span>
+                </span>
+            </form> <!-- Paypal Form -->
+
+
         </div> <!-- .container -->
 
         <footer id="footer" class="clearfix"> 

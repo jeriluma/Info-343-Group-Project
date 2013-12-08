@@ -127,6 +127,37 @@ $(function(){
     });
 
     $('.check-out-btn').click(function(){
-        // check out to paypal
+        createCart(cartModel);
+
+        $('.paypal-form').submit();
     });
 }); //document ready()
+
+function createCart(cartModel) {
+    var idx;
+    var item;
+    var itemTemplateClone;
+    var itemTemplate = $('.paypal-item-template');
+    var itemContainer = $('.paypal-item-container');
+
+    itemContainer.empty();
+
+    for(idx = 1; idx< cartModel.items.length + 1; ++idx){
+        itemTemplateClone = itemTemplate.clone();
+        item = cartModel.items[idx - 1];
+
+        itemTemplateClone.find('#item-name').attr({
+            'name': "item_name_" + idx,
+            'value': item.size + " " + item.name
+        });
+
+        
+        itemTemplateClone.find('#amount').attr({
+            'name': "amount_" + idx,
+            'value': item.price
+        });
+
+        itemContainer.append(itemTemplateClone);
+    }
+
+}
