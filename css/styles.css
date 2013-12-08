@@ -394,7 +394,38 @@ header nav ul ul ul {
 }
 
 .pic {
-    width: 10%;
+    width: 45%;
 }
+
+.cart-item-container {
+    margin-top: 30px;
+}
+.sort-ui {
+    text-align: center;
+}
+
+.item-card{
+    width: 300px;
+    height: 450px;
+   float: left;
+
+   background-color: transparent;
+    
+ }
+
+.container {
+    margin: 0 auto;
+}
+
+.check-out-btn{
+    margin-bottom: 50px;
+}
+
+.cart{
+    margin: 0 auto;
+    margin-left: 5%;
+
+}
+
 
 

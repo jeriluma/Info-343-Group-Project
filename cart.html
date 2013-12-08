@@ -29,6 +29,7 @@
                         <li class"active"><a href="shop.html">Shop</a></li>
                         <li><a href="about.html">About Me</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
                     </ul>   
             </header>            
         </div>
@@ -36,55 +37,8 @@
         <div class="container">
         
 
-            <!-- sorting UI -->
-            <div class="sort-ui">
-                <span class="sort-label"></span>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default" data-sortby="all">All</button>
-                    <button type="button" class="btn btn-default" data-sortby="dress">Dresses</button>
-                    <button type="button" class="btn btn-default" data-sortby="shirt">Shirts</button>
-                    <button type="button" class="btn btn-default" data-sortby="sweater">Sweaters</button>
-                    <button type="button" class="btn btn-default" data-sortby="jeans">Jeans</button>
-                    <button type="button" class="btn btn-default" data-sortby="jacket">Jackets</button>
-                    <button type="button" class="btn btn-default" data-sortby="shoes">Shoes</button>
-                    <button type="button" class="btn btn-default" data-sortby="accessory">Accessories</button>
-                </div>
-            </div>
-
-            <!-- container for the generated clothes entries -->
-         
-           <div class="items">
-            <div class="shop">
-
-            <!-- template card for each entry
-             this will not be displayed, only used by code -->
-          
-            <div class="template">
-                 <div class="item-card">
-                <h2 class="title"></h2>
-                <img class="pic" src="" alt=""/>
-                <div class="details">
-                  <!-- <h3 class="type"></h2> -->
-                    <h3 class="price"></h3>
-                    <p class="description"></p>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-default add-to-cart" data-size="Small" 'data-sizeLetter'="S">S</button>
-                    <button type="button" class="btn btn-default add-to-cart" data-size="Medium" 'data-sizeLetter'="M">M</button>
-                    <button type="button" class="btn btn-default add-to-cart" data-size="Large" 'data-sizeLetter'="L">L</button>
-                </div>
-            </div>  
-        </div>
-            </div>
-        </div>
-    </div>
             <!-- Shopping Cart -->
-
-
-            
-
             <!-- Shopping Cart Template -->
-            <div class="cart">
             <div class="cart-item-container">
                 <div class="cart-item-template">
                     <button type="button" class="btn btn-default btn-xs cart-item-remove-btn"><span class="glyphicon glyphicon-remove remove-item"></span></button>
@@ -143,6 +97,10 @@
 
         </div> <!-- .container -->
 
+            
+
+            
+
         <footer id="footer" class="clearfix"> 
 
             <div class="footer-inner">
@@ -164,8 +122,8 @@
 
 
         <!-- hot links to Bootstrap JavaScript and jQuery (required by Bootstrap) -->
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="js/populateShop.js"></script>
         <script src="js/built-shop.js"></script>
         <script src="js/cartSupport.js"></script>
