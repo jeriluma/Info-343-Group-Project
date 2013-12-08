@@ -49,7 +49,7 @@ var Clothes = {
     	{type: 'sweater', price: '19.00', title: 'Long-sleeved Sweater', description: 'Long-sleeved top in sweatshirt fabric with studded yoke and studded, rounded hem.', pic: 'img/sweaters9.jpg'},
     	{type: 'sweater', price: '35.00', title: 'Long Cardigan', description: 'Long, fine-knit cardigan in soft cotton with buttons and pockets at front. ', pic: 'img/sweaters10.jpg'},
     ],
-    jeans [
+    jeans: [
         {type: 'jeans', price: '10.00', title: 'Skinny Low Jeans', description: 'Low-rise jeans in washed stretch denim with ultra-slim legs. Front and back pockets.', pic: 'img/jeans1.jpg'},
     	{type: 'jeans', price: '25.00', title: 'Distressed Jeans', description: '5-pocket jeans in washed denim with a loose fit, tapered legs, regular waist, and heavily distressed details.', pic: 'img/jeans2.jpg'},
     	{type: 'jeans', price: '30.23', title: 'Dark Wash Jeans', description: '5-pocket low-rise jeans in washed stretch denim with tapered legs and distressed details.', pic: 'img/jeans3.jpg'},
