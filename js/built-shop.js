@@ -44,6 +44,11 @@ function render(entries) {
         clonedTemplate.find('.type').html(clothingItem.type);
         clonedTemplate.find('.price').html(clothingItem.price);
         clonedTemplate.find('.description').html(clothingItem.description);
+        clonedTemplate.find('.add-to-cart').attr({
+            'data-price': clothingItem.price,
+            'data-type': clothingItem.type,
+            'data-name': clothingItem.title
+        });
         clonedTemplate.removeClass('template');
         container.append(clonedTemplate);
     } //for each item in the array
@@ -88,4 +93,40 @@ $(function(){
         trigger: 'hover',       //triggered on hover
         placement: 'bottom'     //display popover below the button
     }); //popovers
+
+    $('.template').hide(); // hides the templates
+
+    var cartModel = createCartModel();
+    var cartView = createCartView({
+        model: cartModel,
+        template: $('.cart-item-template'),
+        container: $('.cart-item-container'),
+        subtotalPrice: $('.subtotal-price'),
+        taxPrice: $('.total-price-tax'),
+        totalPrice: $('.total-price')
+    });
+
+    cartModel.setItems([]);
+    
+    // adds items to the cart
+    $('.add-to-cart').click(function(){
+        var newCartItem = {
+            type: this.getAttribute('data-type'),
+            name: this.getAttribute('data-name'),
+            sizeLetter: this.getAttribute('data-sizeLetter'),
+            size: this.getAttribute('data-size'),
+            price: parseInt(this.getAttribute('data-price'))
+        };
+
+        cartModel.addItem(newCartItem);
+    });
+
+    // empties the cart
+    $('.empty-cart-btn').click(function(){
+        cartModel.setItems([]);
+    });
+
+    $('.check-out-btn').click(function(){
+        // check out to paypal
+    });
 }); //document ready()
