@@ -32,14 +32,15 @@ a img {
 }
 
 p {
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 13px;
+    line-height: 15px;
     margin: 1.125em 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
     color: #000;
+    text-align: center;
 }
 
 h1 {
@@ -68,7 +69,7 @@ h2 {
 h3 {
     color: #3e51ff !important;
     font-family: 'Montserrat',sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 4px;
     line-height: 1.5em;
@@ -158,6 +159,7 @@ header {
     width: 100%;
     margin: 0;
     padding: 0;
+    margin-bottom: 10px;
 }
 
 /* Header Menu */
@@ -395,6 +397,9 @@ header nav ul ul ul {
 
 .pic {
     width: 45%;
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cart-item-container {
@@ -406,23 +411,39 @@ header nav ul ul ul {
 
 .item-card{
     width: 300px;
-    height: 450px;
+    height: 425px;
     float: left;
+    margin: 5px;
    background-color: transparent; 
 }
 
 .container {
     margin: 0 auto;
+
 }
 
 .check-out-btn{
     margin-bottom: 50px;
 }
 
-.cart{
+.cart {
     margin: 0 auto;
     clear: both;
 }
+
+.sizes {
+    text-align: center;
+}
+
+.btn-group {
+    border: none;
+}
+
+.section {
+    font-size: 250%;
+}
+
+
 
 
 
