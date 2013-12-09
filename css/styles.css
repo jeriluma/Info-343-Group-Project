@@ -17,8 +17,15 @@ body {
 }
 
 body a {
-    font-weight: 400 !important;
+    font-weight: 700 !important;
+
 }
+
+a:hover { 
+    text-decoration: none;
+    color: #C9C9C9 !important;
+}
+
 
 img {
     max-width: 100%;
@@ -187,6 +194,7 @@ header nav ul li {
 
 header nav ul li:hover { 
     visibility: inherit;
+    text-decoration: none;
 }
 
 header nav ul li a {
@@ -195,80 +203,6 @@ header nav ul li a {
     margin: 0 0 0 20px;
     padding: 5px 0 5px 20px;
     font-weight: 700 !important;
-}
-
-header nav ul li a:hover {
-
-}
-
-
-header nav ul a:hover {
-
-}
-
-header nav ul ul {
-    position: absolute;
-    top: -9999em;
-    width: 180px;
-}
-
-header nav ul ul li { 
-    width: 100%; 
-}
-
-header nav ul li .sep {
-    position: absolute;
-    top: 21px;
-    right: -3px;
-    color: #aeaeae;
-}
-
-
-
-header nav ul ul {
-    padding: 0;
-    background: #fff;
-    border: 1px solid #eeeeee;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    padding: 10px 15px;
-}
-
-header nav ul ul li {
-    color: #000000;
-    line-height: 30px;
-    border-bottom: 1px solid #eeeeee;
-    float: none;
-    background: none;
-    padding: 0;
-}
-
-
-
-header nav ul ul li a {
-    color: #000000!important;
-    line-height: 35px;
-    height: 35px;
-    margin: 0;
-}
-
-header nav ul li.sfHover ul a { 
-    margin: 0;
-    padding: 1.125em 0;
-    font-weight: 400;
-    color: #494949!important;   
-    text-transform: none;
-    letter-spacing: 0;
-}
-
-header nav ul li.sfHover ul a:hover { 
-    color: #aaaaaa; 
-}
-
-header nav ul ul ul {
-    padding-top: 5px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
 }
 
 /* Homepage - Feature Image Container */
