@@ -23,7 +23,7 @@ function sortObjArray(objArray, propName) {
 /* render()
     sortBy determins what to sort by...
 */
-function render(sortBy) {
+function render(sortBy, cartModel) {
     var idx;
     var clothingItem;
     var clonedTemplate;  
@@ -58,8 +58,8 @@ function render(sortBy) {
             container.append(clonedTemplate);
         }
     } //for each item in the array
+    cartAdd(cartModel);
 } //render()
-
 
 /* document ready function */
 $(function(){
@@ -67,15 +67,39 @@ $(function(){
     //sort the clothes array by title of item
     sortObjArray(Clothes.entries, 'type');
 
+    var cartModel = createCartModel();
+    var cartView = createCartView({
+        model: cartModel,
+        template: $('.cart-item-template'),
+        container: $('.cart-item-container'),
+        subtotalPrice: $('.subtotal-price'),
+        taxPrice: $('.total-price-tax'),
+        totalPrice: $('.total-price')
+    });
+
+    // empties the cart initially
+    cartModel.setItems([]);
+
+    // empties the cart
+    $('.empty-cart-btn').click(function(){
+        cartModel.setItems([]);
+    });
+
+    $('.check-out-btn').click(function(){
+        createCart(cartModel);
+
+        $('.paypal-form').submit();
+    });
+
     //render the items
-    render('all');
+    render('all', cartModel);
 
     //register event handlers for sort buttons
     $('.sort-ui .btn').click(function(){
         var sortBy = this.getAttribute('data-sortby');     //sort by type
 
         //re-render the list
-        render(sortBy);
+        render(sortBy, cartModel);
 
         //remove the 'active' class from the sort button
         //that currently has it, and add the 'active' class
@@ -96,19 +120,10 @@ $(function(){
         placement: 'bottom'     //display popover below the button
     }); //popovers
 
-    var cartModel = createCartModel();
-    var cartView = createCartView({
-        model: cartModel,
-        template: $('.cart-item-template'),
-        container: $('.cart-item-container'),
-        subtotalPrice: $('.subtotal-price'),
-        taxPrice: $('.total-price-tax'),
-        totalPrice: $('.total-price')
-    });
-
-    // empties the cart initially
-    cartModel.setItems([]);
     
+}); //document ready()
+
+function cartAdd(cartModel) {
     // adds items to the cart
     $('.add-to-cart').click(function(){
         var newCartItem = {
@@ -118,21 +133,9 @@ $(function(){
             size: this.getAttribute('data-size'),
             price: parseFloat(this.getAttribute('data-price'))
         };
-
         cartModel.addItem(newCartItem);
     });
-
-    // empties the cart
-    $('.empty-cart-btn').click(function(){
-        cartModel.setItems([]);
-    });
-
-    $('.check-out-btn').click(function(){
-        createCart(cartModel);
-
-        $('.paypal-form').submit();
-    });
-}); //document ready()
+}
 
 function createCart(cartModel) {
     var idx;
@@ -151,7 +154,6 @@ function createCart(cartModel) {
             'name': "item_name_" + idx,
             'value': item.sizeLetter + " " + item.name
         });
-
         
         itemTemplateClone.find('#amount').attr({
             'name': "amount_" + idx,
