@@ -35,85 +35,94 @@
 
         <div class="container">
             <!-- sorting UI -->
-            <div class="sort-ui">
-                <span class="sort-label"></span>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default" data-sortby="all">All</button>
-                    <button type="button" class="btn btn-default" data-sortby="dress">Dresses</button>
-                    <button type="button" class="btn btn-default" data-sortby="shirt">Shirts</button>
-                    <button type="button" class="btn btn-default" data-sortby="sweater">Sweaters</button>
-                    <button type="button" class="btn btn-default" data-sortby="jeans">Jeans</button>
-                    <button type="button" class="btn btn-default" data-sortby="jacket">Jackets</button>
-                    <button type="button" class="btn btn-default" data-sortby="shoes">Shoes</button>
-                    <button type="button" class="btn btn-default" data-sortby="accessory">Accessories</button>
+            <div class="row">
+                <div class="sort-ui">
+                    <span class="sort-label"></span>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default" data-sortby="all">All</button>
+                        <button type="button" class="btn btn-default" data-sortby="dress">Dresses</button>
+                        <button type="button" class="btn btn-default" data-sortby="shirt">Shirts</button>
+                        <button type="button" class="btn btn-default" data-sortby="sweater">Sweaters</button>
+                        <button type="button" class="btn btn-default" data-sortby="jeans">Jeans</button>
+                        <button type="button" class="btn btn-default" data-sortby="jacket">Jackets</button>
+                        <button type="button" class="btn btn-default" data-sortby="shoes">Shoes</button>
+                        <button type="button" class="btn btn-default" data-sortby="accessory">Accessories</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- container for the generated clothes entries -->
-            <div class="items">
-                <div class="shop"></div>
-                <!-- template card for each entry this will not be displayed, only used by code -->
-                <div class="template">
-                    <div class="item-card">
-                        <h2 class="title"></h2>
-                        <img class="pic" src="" alt=""/>
-                        <div class="details">
-                          <!-- <h3 class="type"></h2> -->
-                            <h3 class="price"></h3>
-                            <p class="description"></p>
+            <div class="row"> <!-- two column layout -->
+                <!-- container for the generated clothes entries -->
+                <div class="col-md-7"> <!-- menu -->
+                    <div class="items">
+                        <div class="shop"></div>
+                        <!-- template card for each entry this will not be displayed, only used by code -->
+                        <div class="template">
+                            <div class="item-card">
+                                <h2 class="title"></h2>
+                                <img class="pic" src="" alt=""/>
+                                <div class="details">
+                                  <!-- <h3 class="type"></h2> -->
+                                    <h3 class="price"></h3>
+                                    <p class="description"></p>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-default add-to-cart" data-size="Small" data-sizeLetter="S">S</button>
+                                    <button type="button" class="btn btn-default add-to-cart" data-size="Medium" data-sizeLetter="M">M</button>
+                                    <button type="button" class="btn btn-default add-to-cart" data-size="Large" data-sizeLetter="L">L</button>
+                                </div>
+                            </div>  <!-- item card-->
+                        </div> <!-- template -->
+                    </div> <!-- items-->
+                </div> <!--col-md-7 --> 
+                <!-- Shopping Cart -->
+                <div class="col-md-5">  <!-- cart -->
+                    <div class="cart">
+                        <h1>Shopping Cart</h1>
+                        <!-- Shopping Cart Template -->
+                        <div class="cart-item-container">
+                            <div class="cart-item-template">
+                                <button type="button" class="btn btn-default btn-xs cart-item-remove-item"><span class="glyphicon glyphicon-remove remove-item"></span></button>
+                                <span class="sizeLetter"></span>
+                                <span class="name"></span>
+                                $<span class="price"></span>
+                            </div>
+                        </div> <!-- Shopping Cart Template -->
+                        <div><button type="button" class="btn btn-danger empty-cart-btn"><span class="glyphicon glyphicon-remove"></span> Empty Cart</button></div>
+                    </div>
+                    <!-- Shopping Cart Checkout -->
+                    <div class="cart-checkout">
+                        <div class="row">
+                            <div class="col-xs-10">Subtotal:</div>
+                            <div class="col-xs-2">$<span class="subtotal-price"></span></div>  
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-10">Sales Tax @ 9.5%:</div>
+                            <div class="col-xs-2">$<span class="total-price-tax"></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-10">Total:</div>
+                            <div class="col-xs-2">$<span class="total-price"></span></div>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-default add-to-cart" data-size="Small" data-sizeLetter="S">S</button>
-                            <button type="button" class="btn btn-default add-to-cart" data-size="Medium" data-sizeLetter="M">M</button>
-                            <button type="button" class="btn btn-default add-to-cart" data-size="Large" data-sizeLetter="L">L</button>
+                            <button type="button" class="btn btn-success check-out-btn">Check Out</button>
                         </div>
-                    </div>  
-                </div>
-            </div>
-            <!-- Shopping Cart -->
-            <div class="cart">
-                <!-- Shopping Cart Template -->
-                <div class="cart-item-container">
-                    <div class="cart-item-template">
-                        <button type="button" class="btn btn-default btn-xs cart-item-remove-item"><span class="glyphicon glyphicon-remove remove-item"></span></button>
-                        <span class="sizeLetter"></span>
-                        <span class="name"></span>
-                        $<span class="price"></span>
-                    </div>
-                </div> <!-- Shopping Cart Template -->
-                <div><button type="button" class="btn btn-danger empty-cart-btn"><span class="glyphicon glyphicon-remove"></span> Empty Cart</button></div>
-            </div>
-            <!-- Shopping Cart Checkout -->
-            <div class="cart-checkout">
-                <div class="row">
-                    <div class="col-xs-10">Subtotal:</div>
-                    <div class="col-xs-2">$<span class="subtotal-price"></span></div>  
-                </div>
-                <div class="row">
-                    <div class="col-xs-10">Sales Tax @ 9.5%:</div>
-                    <div class="col-xs-2">$<span class="total-price-tax"></span></div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-10">Total:</div>
-                    <div class="col-xs-2">$<span class="total-price"></span></div>
-                </div>
-                <div>
-                    <button type="button" class="btn btn-success check-out-btn">Check Out</button>
-                </div>
-            </div> <!-- Shopping Cart Checkout -->
+                    </div> <!-- Shopping Cart Checkout -->
 
-            <!-- Paypal Form -->
-            <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input type="hidden" name="cmd" value="_cart">
-                <input type="hidden" name="upload" value="1">
-                <input type="hidden" name="business" value="jerissalumansoc@gmail.com">
-                <span class="paypal-item-container">
-                    <span class="paypal-item-template">
-                        <input type="hidden" id="item-name" name="item_name_" value="">
-                        <input type="hidden" id="amount" name="amount_" value="">
-                    </span>
-                </span>
-            </form> <!-- Paypal Form -->
+                    <!-- Paypal Form -->
+                    <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="upload" value="1">
+                        <input type="hidden" name="business" value="jerissalumansoc@gmail.com">
+                        <span class="paypal-item-container">
+                            <span class="paypal-item-template">
+                                <input type="hidden" id="item-name" name="item_name_" value="">
+                                <input type="hidden" id="amount" name="amount_" value="">
+                            </span>
+                        </span>
+                    </form> <!-- Paypal Form -->
+                <div> <!-- end of col-md-4 -->
+            </div> <!-- end of row --> 
         </div> <!-- .container -->
 
         <footer id="footer" class="clearfix"> 
