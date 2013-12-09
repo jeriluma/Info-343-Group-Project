@@ -55,6 +55,7 @@ function render(sortBy, cartModel) {
         clonedTemplate.removeClass('template');
 
         if(sortBy === 'all' || sortBy === clothingItem.type){
+            clonedTemplate.show();
             container.append(clonedTemplate);
         }
     } //for each item in the array
@@ -63,6 +64,7 @@ function render(sortBy, cartModel) {
 
 /* document ready function */
 $(function(){
+    $('.template').hide();
 
     //sort the clothes array by title of item
     sortObjArray(Clothes.entries, 'type');
