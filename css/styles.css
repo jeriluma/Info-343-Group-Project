@@ -423,8 +423,7 @@ header nav ul ul ul {
 
 .cart{
     margin: 0 auto;
-    margin-left: 5%;
-
+    clear: both;
 }
 
 
