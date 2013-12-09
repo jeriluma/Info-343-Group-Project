@@ -98,10 +98,16 @@
                         <!-- Shopping Cart Template -->
                         <div class="cart-item-container">
                             <div class="cart-item-template">
-                                <button type="button" class="btn btn-default btn-xs cart-item-remove-item"><span class="glyphicon glyphicon-remove remove-item"></span></button>
-                                <span class="sizeLetter"></span>
-                                <span class="name"></span>
-                                $<span class="price"></span>
+                                <div class="row">
+                                    <div class="col-xs-7">
+                                        <button type="button" class="btn btn-default btn-xs cart-item-remove-item remove-item"><span class="glyphicon glyphicon-remove "></span></button>
+                                        <span class="name"></span>
+                                    </div>
+                                    <div class="col-xs-1"><span class="sizeLetter"></span></div>
+                                    <div class="col-xs-4">$<span class="price"></span></div>
+                                </div>
+                                
+                                
                             </div>
                         </div> <!-- Shopping Cart Template -->
                         
@@ -109,16 +115,16 @@
                     <!-- Shopping Cart Checkout -->
                     <div class="cart-checkout">
                         <div class="row">
-                            <div class="col-xs-10">Subtotal:</div>
-                            <div class="col-xs-2">$<span class="subtotal-price"></span></div>  
+                            <div class="col-xs-8">Subtotal:</div>
+                            <div class="col-xs-4">$<span class="subtotal-price"></span></div>  
                         </div>
                         <div class="row">
-                            <div class="col-xs-10">Sales Tax @ 9.5%:</div>
-                            <div class="col-xs-2">$<span class="total-price-tax"></span></div>
+                            <div class="col-xs-8">Sales Tax @ 9.5%:</div>
+                            <div class="col-xs-4">$<span class="total-price-tax"></span></div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-10">Total:</div>
-                            <div class="col-xs-2">$<span class="total-price"></span></div>
+                            <div class="col-xs-8">Total:</div>
+                            <div class="col-xs-4">$<span class="total-price"></span></div>
                         </div>
                         <div>
                             <button type="button" class="btn btn-success check-out-btn">Check Out</button>
