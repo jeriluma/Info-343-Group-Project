@@ -385,7 +385,9 @@ header nav ul li a {
     margin-top: 5px;
 }
 
-
+.items-col {
+     z-index: 999;
+}
 
 
 
